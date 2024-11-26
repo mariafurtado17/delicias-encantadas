@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias Encantadas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <h1 class="titulo">Delícias Encantadas</h1>
+    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Adicionando a biblioteca do EmailJS -->
+    <script src="script.js" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<!-- Certifique-se de que este caminho está correto -->
+
+    <div class="menu-bar-container">
+        <!-- Barra de Menu -->
+        <nav class="menu-bar">
+            <a href="index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </div>
+
+    <div class="carrossel">
+        <div class="slides" id="slides">
+            <div class="slide"><img src="logoo.png" alt="Imagem 1" style="width:100%"></div>
+            <div class="slide"><img src="bolo.png" alt="Imagem 2" style="width:100%"></div>
+        </div>
+        <div class="navegacao">
+            <span class="prev" onclick="mudarSlide(-1)">&#10094;</span>
+            <span class="next" onclick="mudarSlide(1)">&#10095;</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- Texto da história -->
+        <section id="inicio" class="historia">
+            <h2 class="historia-titulo">Nossa História</h2>
+            <p>
+                No início, eram apenas receitas testadas na cozinha de casa, feitas com cuidado e amor. Bolos, tortas, doces... cada criação era um experimento cheio de dedicação.
+                As primeiras encomendas vieram de amigos e familiares.
+            </p>
+            <p>
+                O que começou como uma pequena produção cresceu rapidamente. As sobremesas se destacaram não só pelo sabor, mas pela atenção aos detalhes e pelo preço acessível,
+                que permite a todos desfrutarem de um pouco de alegria doce no dia a dia. Foi então que a Delícias Encantadas ganhou seu nome, representando exatamente o que queria entregar:
+                sobremesas que encantassem, feitas com o coração.
+            </p>
+            <p>
+                Com o tempo, a pequena confeitaria foi crescendo e ganhando destaque na cidade e nos corações que saboreiam as nossas sobremesas.
+                Essa é a essência da Delícias Encantadas, que nasceu da simplicidade e cresceu com o sonho de adoçar vidas.
+            </p>
+        </section>
+
+   
+
+    <div class="footer-image">   
+        <img src="contato.png" alt="">
+    </div>
+</body>
+</html>

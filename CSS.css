@@ -1,0 +1,456 @@
+body {
+    background-color: #fff5e4; /* Cor de fundo */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo da Barra de Menu */
+.menu-bar {
+    background: linear-gradient(to bottom, #d2a679, #c78b6f); /* Gradiente suave */
+    display: flex;
+    justify-content: space-between; /* Alinhamento corrigido */
+    font-weight: bold; /* Correção do peso da fonte */
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px 20px; /* Ajusta o espaçamento interno */
+    box-shadow: none; /* Remove qualquer sombra */
+}
+
+.menu-bar-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.menu-bar a {
+    color: #000;
+    text-decoration: none;
+    padding: 0 15px; /* Espaçamento entre os itens */
+}
+
+.menu-bar a:hover {
+    color: #FFFFFF;
+    background-color: #a67d5a; 
+    position: sticky; /* Fixa o menu quando chegar ao topo */
+    top: 0; /* Coloca o menu no topo da tela */
+    z-index: 1000;/* Efeito de destaque no hover */
+}
+
+/* Redefinindo margens e preenchimento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do Cabeçalho */
+.header {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza os itens */
+    position: relative; /* Necessário para o posicionamento de .welcome */
+    padding: 20px;
+    width: 100%;
+}
+
+/* Estilo do Título */
+.titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 90px;
+    color: #9b765a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: color 0.3s;
+    text-shadow: 1px 1px 2px #d9bfae; /* Sombra leve */
+    z-index: 1; /* Garante que o título fique acima de outros elementos */
+    position: sticky; /* Fixa o título */
+}
+
+/* Efeito hover no título */
+.titulo:hover {
+    color: #c4a48d; /* Efeito hover */
+}
+
+/* Estilo das partículas de glitter */
+.glitter {
+    position: absolute;
+    width: 4px; /* Tamanho pequeno */
+    height: 4px; /* Tamanho pequeno */
+    background: radial-gradient(circle, rgba(255, 223, 186, 0.8) 0%, rgba(255, 215, 0, 0.5) 100%); /* Gradiente que imita brilho */
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.8; /* Leve transparência para um efeito mais suave */
+    animation: fadeOut 5.5s forwards, glitterMovement 1.5s forwards; /* Aumenta a duração da animação */
+}
+
+/* Animação de desaparecimento do glitter */
+@keyframes fadeOut {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+/* Animação de movimento das partículas */
+@keyframes glitterMovement {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Alinhamento do título */
+h1 {
+    text-align: center;
+}
+
+/* Estilo do carrossel */
+.carrossel {
+    width: 100%; /* A largura do carrossel ocupa toda a tela */
+    height: 400px; /* Altura fixada para o carrossel */
+    overflow: hidden; /* Oculta qualquer parte da imagem que ultrapasse o limite */
+    position: relative; /* Necessário para a navegação (prev/next) */
+}
+
+.slides {
+    display: flex; /* Alinha as imagens lado a lado */
+    transition: transform 0.5s ease-in-out; /* Transição suave para o slide */
+}
+
+.slide {
+    min-width: 100%; /* Cada imagem ocupa 100% da largura do carrossel */
+    height: 100%; /* Garante que a imagem ocupe toda a altura do carrossel */
+    overflow: hidden; /* Evita que partes das imagens saiam do carrossel */
+}
+
+.slide img {
+    width: 100%; /* As imagens ocupam toda a largura do slide */
+    height: auto; /* Ajusta a altura proporcionalmente */
+}
+
+/* Estilos para os botões de navegação */
+.navegacao {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 24px;
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Cor mais escura no hover */
+}
+
+
+/* Estilo para a história da confeitaria */
+/* Estilo para a história da confeitaria */
+.historia {
+    padding: 20px;
+    margin: 30px auto; /* Margin auto para centralizar horizontalmente */
+    max-width: 800px; /* Limita a largura da seção */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: center; /* Centraliza o texto dentro da história */
+}
+
+/* Ajustes para o título da história */
+.historia-titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #9b765a;
+    margin-bottom: 20px;
+}
+
+/* Ajustes para os parágrafos da história */
+.historia p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #9b7458;
+    word-wrap: break-word; /* Quebra palavras longas para ajustar ao espaço */
+    overflow-wrap: break-word;
+}
+
+/* Removendo o centralizado da página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Barra de Menu */
+.menu-bar {
+    background: linear-gradient(to bottom, #d2a679, #c78b6f);
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    width: 100%;
+}
+
+.menu-bar-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Estilos adicionais para o carrossel e footer-image podem ser mantidos do seu código */
+.footer-image img {
+    width: 100%; /* Ajusta a imagem para ocupar 100% da largura do seu contêiner */
+    max-width: 1500px; /* Define um limite máximo de largura para a imagem */
+    height: auto; /* Mantém a proporção da imagem (ajustando a altura automaticamente) */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+.historia p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color:#9b7458;
+    text-align: left; 
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+    
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+}
+
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Container dos produtos */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 1fr)
+}
+
+/* Card de cada produto */
+.product-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 270px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* Nome do produto */
+.product-card h3 {
+    font-size: 14px;
+    color: #333333;
+    margin: 10px 0;
+}
+
+/* Preço */
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Imagem do produto */
+.product-card img {
+    width: 150px; /* Define uma largura fixa */
+    height: 195px; /* Define uma altura fixa */
+    object-fit: cover; /* Ajusta a imagem para preencher o espaço sem distorcer */
+    border-radius: 8px; /* Mantém bordas arredondadas, se necessário */
+}
+
+
+/* Estilos Gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2; 
+    color: #333;
+}
+
+#contato {
+    padding: 40px 20px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color:#9b765a;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contato-info {
+    background-color: #fff8f2;
+    border: 1px solid #9b765a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.contato-info h3 {
+    font-size: 1.8em;
+    color:#9b765a;
+    margin-bottom: 10px;
+}
+
+.contato-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato-info li {
+    font-size: 1.2em;
+    margin: 8px 0;
+    color: #333;
+}
+
+.contato-info strong {
+    color: #9b765a;
+}
+
+.form-contato {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.form-contato h3 {
+    font-size: 2em;
+    color: #9b765a;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #9b765a;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #9b765a;
+    background-color: #fff;
+}
+
+.form-field button {
+    background-color: #9b765a;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.form-field button:hover {
+    background-color: #9b765a;
+}
+
+.form-field button:active {
+    transform: scale(0.98);
+}
+
+
+/* Centralizar o botão de WhatsApp */
+.whatsapp-button {
+    display: block; /* Faz o botão se comportar como um bloco */
+    margin: 0 auto; /* Adiciona margens automáticas nas laterais para centralizar */
+    padding: 10px 20px; /* Ajuste do preenchimento do botão */
+    background-color: #25D366; /* Cor do botão (Verde do WhatsApp) */
+    color: white; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    text-align: center; /* Alinha o texto no centro */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Cor mais escura do WhatsApp ao passar o mouse */
+}
+
+#contato .form-contato {
+    text-align: center; /* Centraliza o conteúdo de texto dentro da div */
+    margin-top: 20px; /* Adiciona um espaçamento no topo da seção */
+}
